@@ -1,0 +1,94 @@
+html {
+	font-size: 62.7%;
+}
+
+#main-doc {
+	position: absolute;
+	margin: 1rem 0rem 1rem 32rem;
+	font-size: 1.6rem;
+	padding: 2rem;
+}
+html,
+#navbar {
+	scrollbar-color: black lightgrey;
+	scrollbar-width: thin;
+	-webkit-scrollbar-width: thin;
+}
+html::-webkit-scrollbar,
+#navbar::-webkit-scrollbar {
+	width: 0.5rem;
+	background-color: lightgray;
+}
+html::-webkit-scrollbar-thumb,
+#navbar::-webkit-scrollbar-thumb {
+	background-color: black;
+}
+
+#navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1rem 0;
+	min-width: 290px;
+	width: 300px;
+	height: 100%;
+	text-align: left;
+	overflow: hidden;
+	overflow-y: auto;
+	border-right: 0.2rem solid black;
+}
+#navbar .heading {
+	text-align: center;
+}
+.nav-links {
+	list-style: none;
+	width: 100%;
+	padding: 0;
+}
+.nav-link {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	font-size: 2rem;
+	border-top: 2px solid black;
+	width: 100%;
+	padding: 1rem;
+	transition: all 0.2s;
+}
+.nav-link:hover {
+	color: darkblue;
+}
+.heading {
+	font-size: 3rem;
+}
+code {
+	display: block;
+	background-color: lightgray;
+	padding: 1.2rem;
+	margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	#navbar {
+		position: fixed;
+		width: 100%;
+		background-color: white;
+		height: auto;
+		border-bottom: 0.2rem solid black;
+	}
+	.nav-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		text-align: center;
+		font-size: 1.6rem;
+	}
+	.nav-link {
+		padding: 0 0.8rem;
+		border: 0;
+		word-wrap: none;
+	}
+	#main-doc {
+		margin: 20rem auto;
+	}
+}
